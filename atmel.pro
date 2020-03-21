@@ -1,4 +1,4 @@
-update=18.03.2020 13:39:18
+update=21.03.2020 18:14:55
 version=1
 last_client=kicad
 [general]
@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=ATMEL_DENEME1.net
+LastNetListRead=atmel.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
@@ -233,7 +233,7 @@ Enabled=1
 [pcbnew/Layer.F.Fab]
 Enabled=1
 [pcbnew/Layer.Rescue]
-Enabled=1
+Enabled=0
 [pcbnew/Netclasses]
 [pcbnew/Netclasses/Default]
 Name=Default

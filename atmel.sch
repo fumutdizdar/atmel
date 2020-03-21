@@ -109,8 +109,8 @@ $Comp
 L Connector:Conn_01x02_Male J1
 U 1 1 5E722CC8
 P 750 7400
-F 0 "J1" H 858 7489 50  0000 C CNN
-F 1 "Güç Girişi" H 858 7490 50  0001 C CNN
+F 0 "J1" H 700 7350 50  0000 C CNN
+F 1 "Güç Girişi" H 858 7490 50  0000 C CNN
 F 2 "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical" H 750 7400 50  0001 C CNN
 F 3 "~" H 750 7400 50  0001 C CNN
 	1    750  7400
@@ -167,16 +167,12 @@ NoConn ~ 4450 2700
 NoConn ~ 5650 2400
 NoConn ~ 5650 2500
 NoConn ~ 5650 2600
-NoConn ~ 5650 2700
-NoConn ~ 5650 2800
-NoConn ~ 5650 2900
 NoConn ~ 5650 3300
 NoConn ~ 5650 3400
 NoConn ~ 5650 3500
 NoConn ~ 5650 3600
 NoConn ~ 5650 3700
 NoConn ~ 5650 3800
-NoConn ~ 5650 3900
 NoConn ~ 5650 4100
 NoConn ~ 5650 4200
 NoConn ~ 5650 4300
@@ -314,4 +310,91 @@ F 3 "~" H 1200 1450 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Connection ~ 1200 1450
+$Comp
+L Connector_Generic:Conn_02x03_Odd_Even J2
+U 1 1 5E7696BB
+P 1300 6750
+F 0 "J2" H 1350 7067 50  0000 C CNN
+F 1 "ICSP" H 1350 6976 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_2x03_P1.27mm_Vertical" H 1300 6750 50  0001 C CNN
+F 3 "~" H 1300 6750 50  0001 C CNN
+	1    1300 6750
+	1    0    0    -1  
+$EndComp
+Text GLabel 1100 6650 0    50   Input ~ 0
+MISO
+Text GLabel 1600 6750 2    50   Input ~ 0
+MOSI
+Text GLabel 1100 6750 0    50   Input ~ 0
+SCK
+Text GLabel 1600 6850 2    50   Input ~ 0
+GND
+Text GLabel 2750 1250 2    50   Input ~ 0
++5V
+Text GLabel 1600 6650 2    50   Input ~ 0
++5V
+Text GLabel 1100 6850 0    50   Input ~ 0
+RESET
+Text GLabel 5650 2800 2    50   Input ~ 0
+MISO
+Text GLabel 5650 2700 2    50   Input ~ 0
+MOSI
+Text GLabel 5650 2900 2    50   Input ~ 0
+SCK
+$Comp
+L Device:R_Small R1
+U 1 1 5E76EB57
+P 2400 6900
+F 0 "R1" H 2459 6946 50  0000 L CNN
+F 1 "10K" H 2459 6855 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric_Pad1.05x0.95mm_HandSolder" H 2400 6900 50  0001 C CNN
+F 3 "~" H 2400 6900 50  0001 C CNN
+	1    2400 6900
+	1    0    0    -1  
+$EndComp
+Text GLabel 2850 6850 3    50   Input ~ 0
+RESET
+$Comp
+L power:+5V #PWR09
+U 1 1 5E77146E
+P 2400 6750
+F 0 "#PWR09" H 2400 6600 50  0001 C CNN
+F 1 "+5V" H 2415 6923 50  0000 C CNN
+F 2 "" H 2400 6750 50  0001 C CNN
+F 3 "" H 2400 6750 50  0001 C CNN
+	1    2400 6750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 6750 2400 6800
+$Comp
+L Connector:Conn_01x02_Male J3
+U 1 1 5E773A44
+P 2950 6650
+F 0 "J3" V 2900 6600 50  0000 C CNN
+F 1 "Reset Jmp" H 3000 6700 50  0000 C CNN
+F 2 "Connector_PinHeader_1.27mm:PinHeader_1x02_P1.27mm_Vertical" H 2950 6650 50  0001 C CNN
+F 3 "~" H 2950 6650 50  0001 C CNN
+	1    2950 6650
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR010
+U 1 1 5E775BA6
+P 2950 7100
+F 0 "#PWR010" H 2950 6850 50  0001 C CNN
+F 1 "GND" H 2955 6927 50  0000 C CNN
+F 2 "" H 2950 7100 50  0001 C CNN
+F 3 "" H 2950 7100 50  0001 C CNN
+	1    2950 7100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 6850 2950 7100
+Text GLabel 5650 3900 2    50   Input ~ 0
+RESET
+Text GLabel 2400 7200 3    50   Input ~ 0
+RESET
+Wire Wire Line
+	2400 7000 2400 7200
 $EndSCHEMATC
